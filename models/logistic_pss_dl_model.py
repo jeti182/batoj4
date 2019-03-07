@@ -1,5 +1,5 @@
-import abc
 from toj_model import TOJModel, ParameterDescription
+
 
 class LogisticPSSDLModel(TOJModel):
 	
@@ -20,15 +20,16 @@ class LogisticPSSDLModel(TOJModel):
 		""" Provide a summary description of this model, possibly using
 		the information properties """
 		pd = self.parameters_descriptions
-		return(" A traditional psychometric model with parameters " + 
-		pd[0].symbol + " (" + pd[0].full_name + ") " + "which is " +
-		pd[0].meaning + 
+		return(" A traditional psychometric model with parameters " +
+			   pd[0].symbol + " (" + pd[0].full_name + ") " + "which is " +
+			   pd[0].meaning +
 		" and " +
-		pd[1].symbol + " (" + pd[1].full_name + ") " + "which is " +
-		pd[1].meaning) 
+			   pd[1].symbol + " (" + pd[1].full_name + ") " + 'which is ' +
+			   pd[1].meaning)
 
 	def simulate(self, parameters):
 		print("Not implemented yet!")	
+
 
 if __name__ == '__main__':
 	model = LogisticPSSDLModel()

@@ -1,13 +1,15 @@
 import abc
 
-class ParameterDescription():
+
+class ParameterDescription:
 	""" Struct for parameter descriptions """
 	def __init__(self, symbol="x", full_name="unnamed",
-				meaning="This parameter has no meaning defined "):
+					meaning="This parameter has no meaning defined "):
 		self.symbol = symbol
 		self.symbol_math_font = symbol
 		self.full_name = full_name
 		self.meaning = meaning
+
 
 class TOJModel(abc.ABC):
 	""" This is the base class for TOJ models """
@@ -20,7 +22,7 @@ class TOJModel(abc.ABC):
 	def simulate(self, parameters):
 		""" Implement a (if possible generative) simulation """
 		return
-        
+
 	@abc.abstractmethod
 	def summary(self):
 		""" Provide a summary description of this model, possibly using
@@ -38,6 +40,3 @@ class TOJModel(abc.ABC):
 	def used_by(self):
 		""" Provide list of references """
 		pass
-		
-
-		
