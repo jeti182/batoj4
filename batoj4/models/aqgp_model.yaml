@@ -1,0 +1,29 @@
+# Model information
+name                  : AQGPModel
+description           : Alcalá-Quintana & García-Pérez (2013) model with processing speed, decision level, and error parameters.
+parameter_descriptions:
+ - acronym  : lam_p
+   name     : lambda probe
+   meaning  : Rate at which the probe stimulus is processed.
+ - acronym  : lam_r
+   name     : lambda reference
+   meaning  : Rate at which the reference stimulus is processed.
+ - acronym  : delta
+   name     : Range of indecision
+   meaning  : Arrival time difference within which partipants cannot judge the order.
+ - acronym  : tau
+   name     : Delay
+   meaning  : Relative delay between processing stimulus probe and reference.
+ - acronym  : xi
+   name     : Bias
+   meaning  : Bias toward the probe (? check!) stimulus.
+ - acronym  : e_p
+   name     : Error probe
+   meaning  : Finger errors in reporting the probe as first.
+ - acronym  : e_r
+   name     : Error reference
+   meaning  : Finger errors in reporting the probe as first.
+used-by:
+ - reference : "Alcalá-Quintana, R., & García-Pérez, M. A. (2013). Fitting model-based psychometric functions to simultaneity and temporal-order judgment data: MATLAB and R routines. Behavior research methods, 45(4), 972-998."
+ - reference : "García-Pérez, M. A., & Alcalá-Quintana, R. (2013). Shifts of the psychometric function: distinguishing bias from perceptual effects. The Quarterly Journal of Experimental Psychology, 66(2), 319-337."
+ - reference : "García-Pérez, M. A., & Alcalá-Quintana, R. (2015). Converging evidence that common timing processes underlie temporal-order and simultaneity judgments: A model-based analysis. Attention, Perception, & Psychophysics, 77(5), 1750-1766."

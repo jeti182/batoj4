@@ -1,0 +1,12 @@
+# Model information
+name                  : LogisticDLPSEModel
+description           : Traditional psychometric sigmoid.
+parameter_descriptions:
+ - acronym  : PSE
+   name     : Point of Subjective Simultaneity
+   meaning  : The point where probe-first function corsses the .5 level
+ - acronym  : DL
+   name     : Difference Limen
+   meaning  : bla bla
+used-by:
+ - reference : Test bl b bla blab

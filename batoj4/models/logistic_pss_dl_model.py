@@ -1,12 +1,10 @@
-import abc
-from toj_model import TOJModel, ParameterDescription
+from .toj_model import TOJModel, ParameterDescription
 import tensorflow as tf
 import numpy
 
 class LogisticPSSDLModel(TOJModel):
 	
-	model_description = "Traditional psychometric sigmoid. "
-	
+
 	parameters_descriptions = [ 
 			ParameterDescription("PSS", "Point of Subjective Simultaneity",
 			"The point where probe-first function corsses the .5 level"),
@@ -19,9 +17,6 @@ class LogisticPSSDLModel(TOJModel):
 		""" Function of judging `probe first` over the SOAs """
 		(pss, dl) = parameters
 		return (1.0-(1.0/(1.0+tf.exp(-(1.0/dl*(soas-pss))))))
-
-###	def simulate(self, parameters):
-###		print("Not implemented yet!")	
 
 if __name__ == '__main__':
 	model = LogisticPSSDLModel()
