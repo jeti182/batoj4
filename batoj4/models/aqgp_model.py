@@ -1,4 +1,4 @@
-from .toj_model import TOJModel, ParameterDescription
+from .toj_model import TOJModel
 import tensorflow as tf
 import numpy
 
@@ -8,7 +8,13 @@ class AQGPModel(TOJModel):
 		supplementary material. """
 	
 	def psychometric_function(self, soas, parameters):
-		(lam_p, lam_r, tau, delta, xi, e_p, e_r) = parameters
+		lam_p = parameters['lam_p']
+		lam_r = parameters['lam_p']
+		tau = parameters['tau']
+		delta = parameters['delta']
+		xi = parameters['xi']
+		e_p = parameters['e_p']
+		e_r = parameters['e_r']
 		def difcdf(soas, shift, lam1, lam2):
 			y = soas - shift
 			left = lam1*tf.exp(lam2*y)/(lam1+lam2)    ## min ( ...,1) 
