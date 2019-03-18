@@ -16,5 +16,5 @@ class TVAModel(TOJModel):
 		p_pos = tf.exp(-v_r * soas) \
 			* (v_p / (v_p + v_r)) # p wins racing r according to L's choice axiom
 			
-		p = (soas < 0) * p_neg + (soas >= 0) * p_pos	
+		p = (soas < 0) * p_neg + (soas >= 0) * p_pos
 		return p
