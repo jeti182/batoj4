@@ -2,9 +2,10 @@ from numpy import linspace
 import tensorflow as tf
 from matplotlib.pylab import plt
 
-from  batoj4 import LogisticPSSDLModel, GaussMuSigmaModel, AQGPModel
+from  batoj4 import LogisticPSSDLModel, GaussMuSigmaModel, AQGPModel, TVAModel
 
 sess = tf.Session()
+
 
 with sess:
 
@@ -37,5 +38,9 @@ with sess:
 					'e_p' : 0.01, 'e_r' : 0.02}
 	plot_curve_and_simulation(model, parameters)
 	
+	# Test TVA model
+	model = TVAModel()
+	parameters = {'v_p' : 0.05, 'v_r' : 0.02 }
+	plot_curve_and_simulation(model, parameters)
 	
 	plt.show()

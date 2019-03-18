@@ -1,0 +1,14 @@
+# Model information
+name                  : TVAModel
+description           : TOJ model derived from Bundesen's (1990) Theory of Visual Attention (TVA)
+parameter_descriptions:
+ - acronym  : v_p
+   name     : v probe
+   meaning  : Rate at which the probe stimulus is processed.
+ - acronym  : v_r
+   name     : v reference
+   meaning  : Rate at which the reference stimulus is processed.
+ used-by:
+ - reference : TODO
+ - reference : TODO
+ - reference : TODO
