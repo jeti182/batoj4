@@ -48,11 +48,11 @@ class TOJModel(abc.ABC):
 		
 	def simulate(self, soas, repetitions, parameters, 
 				prameter_distributions = None, number_of_subjects = 1):
-		""" A default simulation is implemented, which uses the models
+		""" A default simulation is implemented, which uses the model's
 		psychometric function to simulate binomially distributed data 
-		ponits. How ever, model developers are encouraged to reimpliment
+		ponits. However, model developers are encouraged to reimplement
 		the stimulation (by overriding this function) in a more
-		instructive genrative, mechanistic form, if their model allows
+		instructive generative, mechanistic form, if their model allows
 		this. """
 		list_of_tojs = []
 		for i in range(number_of_subjects):
